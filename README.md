@@ -1,6 +1,7 @@
 Prometheus Postgres
 ===================
 
+[![Build Status](https://travis-ci.org/sham1316/ansible-role-prometheus-postgres.svg)](https://travis-ci.org/sham1316/ansible-role-prometheus-postgres)
 [![Build Status](https://travis-ci.org/ome/ansible-role-prometheus-postgres.svg)](https://travis-ci.org/ome/ansible-role-prometheus-postgres)
 [![Ansible Role](https://img.shields.io/ansible/role/41331.svg)](https://galaxy.ansible.com/ome/prometheus_postgres)
 
@@ -20,7 +21,7 @@ All variables are optional:
 
 - `prometheus_postgres_dbname`: The database name
 - `prometheus_postgres_data_source_name`: implies `DATA_SOURCE_NAME` ENV variable in the [postgres_exporter](https://github.com/wrouesnel/postgres_exporter) 
-- `prometheus_postgres_port`: Serve metrics on this port, default `9187`
+- `prometheus_postgres_listen_address`: Serve metrics on this port, default `:9187`
 - `prometheus_postgres_query_directory`: the directory containing query files which will be loaded by the exporter, default is `files/`
 - `prometheus_postgres_query_filenames`: A list of additional query files from `prometheus_postgres_query_directory`, default `[queries-default.yml]`
 - `prometheus_postgres_version`: the `postgres_exporter` version to be installed, default `0.4.6`
